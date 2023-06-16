@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A4DB049-273D-49CA-93BE-C2D81BAF95AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WeatherStationTransportServer</RootNamespace>
+    <AssemblyName>WeatherStationTransportServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Image\ICN2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientData.cs" />
+    <Compile Include="DZZ3.cs" />
+    <Compile Include="fmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMain.Designer.cs">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Folder.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fmMain.resx">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Skins\Calmness.ssk" />
+    <None Include="Skins\CalmnessColor1.ssk" />
+    <None Include="Skins\CalmnessColor2.ssk" />
+    <None Include="Skins\DeepCyan.ssk" />
+    <None Include="Skins\DeepGreen.ssk" />
+    <None Include="Skins\DeepOrange.ssk" />
+    <None Include="Skins\DiamondBlue.ssk" />
+    <None Include="Skins\DiamondGreen.ssk" />
+    <None Include="Skins\DiamondOlive.ssk" />
+    <None Include="Skins\DiamondPurple.ssk" />
+    <None Include="Skins\DiamondRed.ssk" />
+    <None Include="Skins\Eighteen.ssk" />
+    <None Include="Skins\EighteenColor1.ssk" />
+    <None Include="Skins\EighteenColor2.ssk" />
+    <None Include="Skins\Emerald.ssk" />
+    <None Include="Skins\EmeraldColor1.ssk" />
+    <None Include="Skins\EmeraldColor2.ssk" />
+    <None Include="Skins\EmeraldColor3.ssk" />
+    <None Include="Skins\GlassBrown.ssk" />
+    <None Include="Skins\GlassGreen.ssk" />
+    <None Include="Skins\GlassOrange.ssk" />
+    <None Include="Skins\Longhorn.ssk" />
+    <None Include="Skins\MacOS.ssk" />
+    <None Include="Skins\Midsummer.ssk" />
+    <None Include="Skins\MidsummerColor1.ssk" />
+    <None Include="Skins\MidsummerColor2.ssk" />
+    <None Include="Skins\MidsummerColor3.ssk" />
+    <None Include="Skins\mp10.ssk" />
+    <None Include="Skins\mp10green.ssk" />
+    <None Include="Skins\mp10maroon.ssk" />
+    <None Include="Skins\mp10mulberry.ssk" />
+    <None Include="Skins\mp10pink.ssk" />
+    <None Include="Skins\mp10purple.ssk" />
+    <None Include="Skins\MSN.ssk" />
+    <None Include="Skins\office2007.ssk" />
+    <None Include="Skins\OneBlue.ssk" />
+    <None Include="Skins\OneCyan.ssk" />
+    <None Include="Skins\OneGreen.ssk" />
+    <None Include="Skins\OneOrange.ssk" />
+    <None Include="Skins\Page.ssk" />
+    <None Include="Skins\PageColor1.ssk" />
+    <None Include="Skins\PageColor2.ssk" />
+    <None Include="Skins\RealOne.ssk" />
+    <None Include="Skins\Silver.ssk" />
+    <None Include="Skins\SilverColor1.ssk" />
+    <None Include="Skins\SilverColor2.ssk" />
+    <None Include="Skins\SportsBlack.ssk" />
+    <None Include="Skins\SportsBlue.ssk" />
+    <None Include="Skins\SportsCyan.ssk" />
+    <None Include="Skins\SportsGreen.ssk" />
+    <None Include="Skins\SportsOrange.ssk" />
+    <None Include="Skins\SteelBlack.ssk" />
+    <None Include="Skins\SteelBlue.ssk" />
+    <None Include="Skins\vista1.ssk" />
+    <None Include="Skins\vista1_green.ssk" />
+    <None Include="Skins\Vista2_color1.ssk" />
+    <None Include="Skins\Vista2_color2.ssk" />
+    <None Include="Skins\Vista2_color3.ssk" />
+    <None Include="Skins\Vista2_color4.ssk" />
+    <None Include="Skins\Vista2_color5.ssk" />
+    <None Include="Skins\Vista2_color6.ssk" />
+    <None Include="Skins\Vista2_color7.ssk" />
+    <None Include="Skins\Warm.ssk" />
+    <None Include="Skins\WarmColor1.ssk" />
+    <None Include="Skins\WarmColor2.ssk" />
+    <None Include="Skins\WarmColor3.ssk" />
+    <None Include="Skins\Wave.ssk" />
+    <None Include="Skins\WaveColor1.ssk" />
+    <None Include="Skins\WaveColor2.ssk" />
+    <None Include="Skins\XPBlue.ssk" />
+    <None Include="Skins\XPGreen.ssk" />
+    <None Include="Skins\XPOrange.ssk" />
+    <None Include="Skins\XPSilver.ssk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\1.ico" />
+    <Content Include="Image\2.ico" />
+    <Content Include="Image\2.jpg" />
+    <Content Include="Image\3.ico" />
+    <Content Include="Image\Comp6.ico" />
+    <Content Include="Image\DocumentsFolder.png" />
+    <Content Include="Image\Forward24x24.GIF" />
+    <Content Include="Image\iChat.png" />
+    <Content Include="Image\ICN2.ico" />
+    <Content Include="Image\kaishi.png" />
+    <Content Include="Image\logo.jpg" />
+    <Content Include="Image\Mail.png" />
+    <Content Include="Image\Safari.png" />
+    <Content Include="Image\Shutdown24x24.GIF" />
+    <Content Include="Image\smart23.ico" />
+    <Content Include="Image\smartLog.ico" />
+    <Content Include="Image\tingzhi.png" />
+    <Content Include="Image\停止.png" />
+    <Content Include="Image\开始.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
